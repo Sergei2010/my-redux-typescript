@@ -2,6 +2,7 @@ import {UserAction, UserActionTypes} from "../../types/user";
 import {Dispatch} from "redux";
 import axios from "axios";
 
+// actionCreator для получения данных с сервера
 export const fetchUsers = () => {
     return async (dispatch: Dispatch<UserAction>) => {
         try {
