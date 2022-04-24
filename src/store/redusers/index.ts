@@ -7,4 +7,5 @@ export const rootReducer = combineReducers({
 	todo: todoReducer 
 })
 
+// получаю тип, чтобы создать свой hook
 export type RootState = ReturnType<typeof rootReducer>

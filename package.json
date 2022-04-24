@@ -13,7 +13,6 @@
     "@types/react-redux": "^7.1.23",
     "axios": "^0.26.1",
     "eslint": "^8.13.0",
-    "eslint-plugin-react-hooks": "^4.5.0-next-df5d32f23-20220411",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^7.2.8",
@@ -46,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.4.0"
   }
 }
