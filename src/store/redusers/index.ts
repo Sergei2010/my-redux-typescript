@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import { userReducer } from './userReducer'
+import { userListReducer } from './userListReducer'
 import { todoReducer } from './todoReducer'
 
-export const rootReducer = combineReducers({ 
+export const rootReducer = combineReducers({
 	user: userReducer,
-	todo: todoReducer 
+	userList: userListReducer,
+	todo: todoReducer,
 })
 
 // получаю тип, чтобы создать свой hook
