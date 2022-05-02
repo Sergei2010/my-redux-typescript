@@ -5,10 +5,14 @@ const Layout = () => {
 	return (
 		<>
 			<header>
-				<CustomLink to='/'>Auth</CustomLink>
+				<CustomLink to='/'>Home</CustomLink>
 				<CustomLink to='/users'>UserList</CustomLink>
+				<CustomLink to='/about'>About</CustomLink>
 			</header>
-			<Outlet />
+			<main className='container'>
+				<Outlet />
+			</main>
+			<footer className='container'>&copy; ReactRouter Tutorials 2022</footer>
 		</>
 	)
 }
