@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useTypedSelector } from '../hooks/useTypedSelector'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 // import { CustomLink } from '../components/'
 // eslint-disable-next-line
 import { fetchUsers } from '../store/action-creators/userList'
@@ -35,11 +35,14 @@ const UserList: React.FC = () => {
 	return (
 		<div className='users-list'>
 			<h1>Our Users</h1>
+			<Link to='/users/new'>Add new user</Link>
+			<hr />
 			{users.map((user) => (
 				<li key={user.id}>
 					<NavLink to={`/users/${user.id}`}>{user.name}</NavLink>
 				</li>
 			))}
+			<hr />
 		</div>
 	)
 }

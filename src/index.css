@@ -1,12 +1,10 @@
 * {
 	box-sizing: border-box;
 }
-
 :root {
 	--color-bg: #2c2c32;
 	--color-active: #0f7dc6;
 }
-
 body {
 	background-color: aliceblue;
 	margin: 0;
@@ -15,10 +13,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 header {
 	background-color: var(--color-bg);
-	padding: 2rem 0;
+	padding: 1.5rem 0;
 	text-align: center;
 }
 header > a {
@@ -29,25 +26,34 @@ header > a {
 header > a:hover {
 	text-decoration: underline;
 }
-
 h1 {
 	text-align: center;
-	margin-top: 0;
 }
-
+hr {
+	width: 100%;
+	color: black;
+	size: 2px;
+	margin: 1rem;
+}
+button {
+	align-self: start;
+	padding: 0.5rem;
+	cursor: pointer;
+}
 .container {
 	max-width: 900px;
 	padding-left: 2rem;
 	padding-right: 2rem;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-
 main {
 	min-height: calc(100vh - 85px - 22px);
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
-
 main a {
 	text-decoration: none;
 	color: var(--color-bg);
@@ -55,40 +61,43 @@ main a {
 main a:hover {
 	text-decoration: underline;
 }
-
 .active {
 	color: var(--color-active);
 	cursor: default;
 }
-
-.users-list {
+.users-list,
+.about-list,
+.user-page {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-}
-
-.users-list li {
 	padding: 1rem;
 }
-
-.users-list li > a {
+.users-list {
+	align-items: left;
+}
+.about-list,
+.user-page {
+	align-items: center;
+}
+.users-list li,
+.about-list li,
+.user-page li {
+	padding: 0.5rem;
+}
+.users-list li > a,
+.about-list li > a {
 	cursor: pointer;
 	text-decoration: none;
 	color: var(--color-bg);
 }
-
-.users-list li > a:hover {
+.users-list li > a:hover,
+.about-list li > a:hover {
 	color: var(--color-active);
 	text-decoration: underline;
 }
-
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+footer {
+	padding: 0.5rem;
 }
-
-.container > h1 {
-	padding: 1rem;
+.user-page > a {
+	text-align: 2rem;
 }

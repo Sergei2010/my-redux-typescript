@@ -1,9 +1,14 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const NotFound = () => {
 	return (
-		<div>
-			This page doesn't exist. Go to <Link to='/'>home</Link>
+		<div className='container'>
+			<h2>
+				<p> This page doesn't exist ...</p>
+			</h2>
+			<p>
+				<NavLink to='/'>Go to home</NavLink>
+			</p>
 		</div>
 	)
 }
