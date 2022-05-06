@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+// import { IAuth } from '../hoc/AuthProvider'
 
 const LoginPage = () => {
 	const location = useLocation()
@@ -8,7 +9,7 @@ const LoginPage = () => {
 
 	const fromPage = location.state?.from?.pathname || '/'
 
-	const handleSubmit = (event) => {
+	const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		event.preventDefault()
 		const form = event.target
 		const user = form.username.value

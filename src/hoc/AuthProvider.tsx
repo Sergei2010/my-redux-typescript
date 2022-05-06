@@ -1,16 +1,24 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, ReactNode } from 'react'
 
-export const AuthContext = createContext(null)
+export interface IAuth {
+	user: string
+	cb: () => void
+	newUser: string
+	children?: ReactNode | undefined
+	signin: () => void
+	signout: () => void
+}
+export const AuthContext = createContext<IAuth | null>(null)
 
-export const AuthProvider = ({ children }) => {
-	const [user, setUser] = useState(null)
+export const AuthProvider = ({ children }: IAuth) => {
+	const [user, setUser] = useState('')
 
-	const signin = (newUser, cb) => {
+	const signin = ({ newUser, cb }: IAuth) => {
 		setUser(newUser)
 		cb()
 	}
-	const signout = (cb) => {
-		setUser(null)
+	const signout = ({ cb }: IAuth) => {
+		setUser('')
 		cb()
 	}
 
